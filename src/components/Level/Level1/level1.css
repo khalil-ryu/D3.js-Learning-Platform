@@ -1,0 +1,55 @@
+.start  {
+    margin: 0px;
+    animation: glitch 5s infinite;
+    font-family: "Courier";
+    color: lime; 
+    font-size: 13px;
+    width: 200px; 
+    white-space: nowrap;
+    overflow: hidden;
+  }
+.active{
+  white-space: pre;
+  margin: 2px;
+  font-family: "Courier";
+  color: lime; 
+  font-size: 18px;
+  width: 100%; 
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+    linha1 4s steps(500, end),
+    glitch 5s infinite
+    ;
+}
+
+ 
+@keyframes linha1{ 
+  from { width: 0; } 
+} 
+
+@keyframes linha2{
+  0%{width: 0;}
+  25%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes pisca{
+  to{opacity: 0%;}
+}
+@keyframes glitch{
+  3%{text-shadow:7px 7px 0px red;}
+  6%{text-shadow:-9px 4px 0px blue;transform:translate(4px,-5px) skewX(20deg);}
+  7%{text-shadow:3px -4px 0px green;}
+  9%{text-shadow:0px 0px 3px white;transform:translate(0px,0px) skewX(0deg);}
+  2% , 54%{transform:translateX(0px) skew(0deg);}
+  55%{transform:translate(-2px,6px) skew(-20deg);}
+  56%{text-shadow:0px 0px 3px white;transform:translate(0px,0px) skew(0deg);}
+  57%{text-shadow:7px 7px 0px red;transform:translate(4px,-10px) skew(-30deg);}
+  58%{text-shadow:0px 0px 3px white;transform:translate(0px,0px) skew(0deg);}
+  62%{text-shadow:3px -4px 0px green;transform:translate(0px,5px) skew(0deg);}
+  63%{text-shadow:0px 0px 3px white;transform:translate(4px,-2px) skew(0deg);}
+  64%{transform:translate(1px,3px); }
+  65%{transform:translate(-7px,2px);}
+  66%{transform:translate(0px,0px) skew(0deg);}
+}

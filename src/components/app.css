@@ -1,0 +1,9 @@
+.mainContainer {
+    display:flex;
+}
+.right-pane {
+    width:50%;
+}
+.left-pane {
+    width: 50%;
+}
